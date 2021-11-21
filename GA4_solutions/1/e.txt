@@ -1,0 +1,4 @@
+
+CREATE  TABLE ROTATE(a float, b float, c float, coordinate int);
+INSERT INTO ROTATE VALUES(COS(alpha),-1*SIN(alpha),0,1),(SIN(alpha),COS(alpha),0,2),(0,0,1,3);
+

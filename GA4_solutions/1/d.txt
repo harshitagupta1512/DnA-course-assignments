@@ -1,0 +1,1 @@
+SELECT avg(X), avg(Y), avg(Z) FROM POINT;

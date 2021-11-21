@@ -1,0 +1,8 @@
+create TABLE ROTATED as select x_, y_, z_ from
+(select X*a+Y*b+Z*c as x_, X, Y, Z, coordinate from POINT cross join ROTATE where coordinate=1) as A
+inner join
+(select X*a+Y*b+Z*c as y_, X, Y, Z, coordinate from POINT cross join ROTATE where coordinate=2) as B
+on A.X=B.X and A.Y=B.Y and A.Z=B.Z
+inner join
+(select X*a+Y*b+Z*c as z_, X, Y, Z, coordinate from POINT cross join ROTATE where coordinate=3) as C
+on B.X=C.X and B.Y=C.Y and B.Z=C.Z;
